@@ -341,7 +341,7 @@ function handleViewProduct(product) {
 <Route
   path="/"
   element={
-    token?(
+    
     <Home
       products={products}
       handleAddToCart={handleAddToCart}
@@ -359,7 +359,7 @@ recentlyViewed={recentlyViewed}
 currentPage={currentPage}
 setCurrentPage={setCurrentPage}
     />
-    ):(<Navigate to="/login"/>)
+   
   }
 />
 
