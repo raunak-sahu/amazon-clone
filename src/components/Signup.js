@@ -7,7 +7,7 @@ function Signup(){
     async function handleSignup(e){
         e.preventDefault();
         try{
-            const response=await axios.post("http://127.0.0.1:8000/signup",
+            const response=await axios.post("https://amazon-backend-dnry.onrender.com/signup",
         {
           username,
           email,

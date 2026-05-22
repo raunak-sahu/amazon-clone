@@ -26,7 +26,7 @@ function AddProduct({fetchProducts}) {
     };
 
     const response = await fetch(
-      "http://127.0.0.1:8000/add-product",
+      "https://amazon-backend-dnry.onrender.com/add-product",
       {
         method: "POST",
 

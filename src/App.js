@@ -72,7 +72,7 @@ async function fetchProducts() {
     try {
 
       const response = await fetch(
-        "http://127.0.0.1:8000/products"
+        "https://amazon-backend-dnry.onrender.com/products"
       );
 
       const data = await response.json();
@@ -143,7 +143,7 @@ function handleAddToCart(product) {
   console.log(product);
  const email = "raunak@gmail.com";
  axios.post(
-  "http://127.0.0.1:8000/add-to-cart",
+  "https://amazon-backend-dnry.onrender.com/add-to-cart",
   {
     email,
     product
