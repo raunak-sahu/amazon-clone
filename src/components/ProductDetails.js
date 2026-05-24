@@ -29,11 +29,7 @@ function ProductDetails({
 
       <p>{product.rating}</p>
 
-      <p>
-        {product.inStock
-          ? "In Stock"
-          : "Out of Stock"}
-      </p>
+     <p>In Stock</p>
 
       <button
         onClick={() => handleAddToCart(product)}
