@@ -34,11 +34,10 @@ function Product({ id,title, image,
   {wishlist.includes(title) ? "❤️" : "🤍"}
 
 </button>
-       <button
+      <button
   onClick={(e) => {
 
     e.stopPropagation();
-
     e.preventDefault();
 
     console.log("BUTTON CLICKED");
@@ -47,12 +46,10 @@ function Product({ id,title, image,
 
   }}
 
-  disabled={!inStock}
-
   className="cart-btn"
 >
 
-  {inStock ? "Add to Cart" : "Out of Stock"}
+  Add to Cart
 
 </button>
       </div>
