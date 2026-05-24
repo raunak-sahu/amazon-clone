@@ -129,7 +129,6 @@ const currentProducts =
         image={item.image}
         price={item.price}
         rating={item.rating}
-        inStock={item.inStock}
          
         onAddToCart={() =>
           handleAddToCart(item)
