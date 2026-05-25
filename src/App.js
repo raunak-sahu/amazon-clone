@@ -1,6 +1,6 @@
 import axios from "axios";
 import Signup from "./components/Signup";
-import {Navigate} from "react-router-dom";
+
 import Login from "./components/Login";
 import AddProduct from "./components/AppProduct";
 import {Routes,Route} from "react-router-dom";
@@ -9,10 +9,7 @@ import CartPage from "./components/CartPage";
 import WishlistPage from "./components/WishlistPage";
 import ProductDetails from "./components/ProductDetails";
 import "./amazonstyle.css";
-
-import Product from "./components/Product";
 import Navbar from "./components/Navbar";
-import CategoryFilter from "./components/CategoryFilter";
 import { useState,useEffect } from "react";
 function App() {
   const [cartCount, setCartCount] = useState(0);
@@ -38,7 +35,6 @@ const [darkMode, setDarkMode] = useState(() => {
 
 });
 const[showCheckout,setShowCheckout]=useState(false); 
-const [selectedProduct, setSelectedProduct] = useState(null);
 const[showCart,setShowCart]=useState(false);
 const [selectedCategory, setSelectedCategory] =
   useState("All");
@@ -205,17 +201,7 @@ function handleAddToCart(product) {
   },2000);
 
 }
-  function handleRemoveItem(indexToRemove) {
 
-  const updatedCart = cartItems.filter(
-    (_, index) => index !== indexToRemove
-  );
-
-  setCartItems(updatedCart);
-
-  setCartCount(cartCount - 1);
-
-}
 function increaseQuantity(indexToIncrease) {
 
   const updatedCart = cartItems.map((item, index) => {
@@ -296,16 +282,16 @@ function toggleWishlist(productTitle) {
 
 }, 0);
 
-const filteredProducts = products.filter(item =>
+/*const filteredProducts = products.filter(item =>
 
   item.title.toLowerCase().includes(    // check whether title contain type text or not
     searchTerm.toLowerCase()     //makes search case insensitive
   )
 
-);
+);*/
 function handleViewProduct(product) {
 
-  setSelectedProduct(product);
+
 
   const updatedRecent = [
 
@@ -319,7 +305,7 @@ function handleViewProduct(product) {
 
   setRecentlyViewed(updatedRecent.slice(0, 4));
 }
- const token=localStorage.getItem("token");
+
   return (
    <div className={darkMode ? "dark-mode" : ""}>
       <Navbar cartCount={cartCount} 
@@ -347,7 +333,6 @@ function handleViewProduct(product) {
       handleAddToCart={handleAddToCart}
       wishlist={wishlist}
       toggleWishlist={toggleWishlist}
-      setSelectedProduct={setSelectedProduct}
       searchTerm={searchTerm}
       setSearchTerm={setSearchTerm}
       sortOption={sortOption}

@@ -29,7 +29,13 @@ function ProductDetails({
 
       <p>{product.rating}</p>
 
+<<<<<<< HEAD
      <p>In Stock</p>
+=======
+     {product.inStock === false
+  ? "Out of Stock"
+  : "In Stock"}
+>>>>>>> 4bd0a87 (final fix)
 
       <button
         onClick={() => handleAddToCart(product)}

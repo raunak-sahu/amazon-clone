@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 function Product({ id,title, image,
   price,
   rating,   inStock, wishlist,
@@ -17,9 +16,9 @@ function Product({ id,title, image,
           alt={title}
           style={{
   width: "100%",
-  height: "250px",
+  height: "220px",
   objectFit: "cover",
-  borderRadius: "10px"
+  borderRadius: "12px"
 }}
         />
         <h3 className="product-price">{price}</h3>
@@ -34,23 +33,36 @@ function Product({ id,title, image,
   {wishlist.includes(title) ? "❤️" : "🤍"}
 
 </button>
+<<<<<<< HEAD
       <button
+=======
+       {/*<button
+>>>>>>> 4bd0a87 (final fix)
   onClick={(e) => {
-
+    if (!inStock) return; 
     e.stopPropagation();
     e.preventDefault();
-
-    console.log("BUTTON CLICKED");
-
     onAddToCart();
-
   }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4bd0a87 (final fix)
   className="cart-btn"
+  disabled={!inStock} 
 >
+<<<<<<< HEAD
 
   Add to Cart
 
+=======
+  
+  {inStock ? "Add to Cart" : "Out of Stock"}
+</button>
+*/}
+<button className="cart-btn">
+  TEST BUTTON
+>>>>>>> 4bd0a87 (final fix)
 </button>
       </div>
 
