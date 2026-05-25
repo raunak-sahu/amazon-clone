@@ -282,13 +282,7 @@ function toggleWishlist(productTitle) {
 
 }, 0);
 
-/*const filteredProducts = products.filter(item =>
 
-  item.title.toLowerCase().includes(    // check whether title contain type text or not
-    searchTerm.toLowerCase()     //makes search case insensitive
-  )
-
-);*/
 function handleViewProduct(product) {
 
 
