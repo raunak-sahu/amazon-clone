@@ -76,9 +76,7 @@ function ProductDetails({ products, handleAddToCart }) {
       <h2>${product.price}</h2>
       <p>Rating: {product.rating}</p>
 
-      {/* 2. FIXED TERNARY LOGIC HERE */}
-      <p>{product.inStock === false ? "Out of Stock" : "In Stock"}</p>
-
+      
       <button onClick={() => handleAddToCart(product)}>
         Add to Cart
       </button>
