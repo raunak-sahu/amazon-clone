@@ -129,15 +129,7 @@ const currentProducts =
         image={item.image}
         price={item.price}
         rating={item.rating}
-<<<<<<< HEAD
-         
-        onAddToCart={() =>
-          handleAddToCart(item)
-        }
-
-=======
         onAddToCart={() => handleAddToCart(item)}
->>>>>>> 4bd0a87 (final fix)
         wishlist={wishlist}
         toggleWishlist={toggleWishlist}
 onViewDetails={() =>
