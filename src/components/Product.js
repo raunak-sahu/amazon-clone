@@ -33,37 +33,18 @@ function Product({ id,title, image,
   {wishlist.includes(title) ? "❤️" : "🤍"}
 
 </button>
-<<<<<<< HEAD
-      <button
-=======
-       {/*<button
->>>>>>> 4bd0a87 (final fix)
+
+<button
   onClick={(e) => {
-    if (!inStock) return; 
     e.stopPropagation();
     e.preventDefault();
     onAddToCart();
   }}
-<<<<<<< HEAD
-
-=======
->>>>>>> 4bd0a87 (final fix)
   className="cart-btn"
-  disabled={!inStock} 
 >
-<<<<<<< HEAD
-
   Add to Cart
+</button>
 
-=======
-  
-  {inStock ? "Add to Cart" : "Out of Stock"}
-</button>
-*/}
-<button className="cart-btn">
-  TEST BUTTON
->>>>>>> 4bd0a87 (final fix)
-</button>
       </div>
 
     </div>
