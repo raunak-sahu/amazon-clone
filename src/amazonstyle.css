@@ -309,16 +309,20 @@ text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
 }*/
-.cart-btn{
-  display:block !important;
-  visibility:visible !important;
-  opacity:1 !important;
-  background:#ffce12;
-  color:white !important;
-  padding:20px !important;
-  z-index:9999 !important;
-  position:relative !important;
+.cart-btn {
+  margin-top: 12px;
+  width: 100%;
+  background-color: #ffd814;
+  border: 1px solid #fcd200;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: black;
 }
+
 .cart-btn:hover {
   background-color: #f7ca00;
   transform: scale(1.03);
