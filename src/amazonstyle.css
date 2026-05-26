@@ -455,7 +455,7 @@ text-align: center;
   margin-left: 10px;
   padding: 10px 15px;
   border: none;
-  background-color: crimson;
+  background-color:  #ffd814; /*red to yellow*/
   color: white;
   cursor: pointer;
   border-radius: 6px;
