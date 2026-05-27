@@ -5,7 +5,9 @@ function Product({
   rating,
   wishlist,
   toggleWishlist,
-  onAddToCart
+  onAddToCart,
+  onDelete,
+  onViewDetails
 }) {
 
   return (
@@ -33,23 +35,42 @@ function Product({
 
         <p>See more</p>
 
-        <button
-          className="wishlist-btn"
-          onClick={() => toggleWishlist(title)}
-        >
-          {wishlist.includes(title) ? "❤️" : "🤍"}
-        </button>
+        <div className="product-buttons">
 
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            e.preventDefault();
-            onAddToCart();
-          }}
-          className="cart-btn"
-        >
-          Add to Cart
-        </button>
+  <button
+    className="wishlist-btn"
+    onClick={() => toggleWishlist(title)}
+  >
+    {wishlist.includes(title) ? "❤️ Wishlist" : "🤍 Wishlist"}
+  </button>
+
+  <button
+    onClick={(e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      onAddToCart();
+    }}
+    className="add-btn"
+  >
+    Add to Cart
+  </button>
+
+<button
+  className="details-btn"
+  onClick={onViewDetails}
+>
+  View Details
+</button>
+
+  <button
+    className="delete-btn"
+    onClick={onDelete}
+  >
+    Delete Product
+  </button>
+
+</div>
+
 
       </div>
 

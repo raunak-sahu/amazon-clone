@@ -24,11 +24,11 @@ function CategoryFilter({
           onClick={() =>
             setSelectedCategory(category)
           }
-      className={
-            selectedCategory === category
-              ? "active-category"
-              : ""
-          }
+  className={
+    selectedCategory === category
+      ? "category-btn active-category"
+      : "category-btn"
+  }
         >
 
           {category}

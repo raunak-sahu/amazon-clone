@@ -1,3 +1,7 @@
+import Orders from "./components/Orders";
+import ProtectedRoute from "./components/ProtectedRoute";
+import AdminRoute from "./components/AdminRoute";
+import AdminPanel from "./components/AdminPanel";
 import axios from "axios";
 import Signup from "./components/Signup";
 
@@ -256,6 +260,39 @@ function emptyCart() {
   setCartCount(0);
 
 }
+function handleCheckout() {
+
+  const email =
+    localStorage.getItem("email");
+
+  axios.post(
+    "https://amazon-backend-dnry.onrender.com/place-order",
+    {
+      email,
+      items: cartItems,
+      total: totalPrice
+    }
+  )
+
+  .then(() => {
+
+    alert("Order Placed Successfully");
+
+    setCartItems([]);
+
+    setCartCount(0);
+
+    setShowCheckout(false);
+
+  })
+
+  .catch((error) => {
+
+    console.log(error);
+
+  });
+
+}
 function toggleWishlist(productTitle) {
 
   if (wishlist.includes(productTitle)) {
@@ -276,9 +313,13 @@ function toggleWishlist(productTitle) {
 
 }
   
-  const totalPrice = cartItems.reduce((total, item) => {
+const totalPrice = cartItems.reduce((total, item) => {
 
-  return total + Number(item.price.replace("₹", ""));
+  return (
+    total +
+    Number(item.price.replace("₹", "")) *
+    item.quantity
+  );
 
 }, 0);
 
@@ -300,6 +341,33 @@ function handleViewProduct(product) {
   setRecentlyViewed(updatedRecent.slice(0, 4));
 }
 
+function handleDeleteProduct(productId) {
+
+  axios.delete(
+    `https://amazon-backend-dnry.onrender.com/delete-product/${productId}`
+  )
+
+  .then(() => {
+
+    const updatedProducts =
+      products.filter(
+        item => item.id !== productId
+      );
+
+    setProducts(updatedProducts);
+
+    alert("Product Deleted");
+
+  })
+
+  .catch((error) => {
+
+    console.log(error);
+
+  });
+
+}
+
   return (
    <div className={darkMode ? "dark-mode" : ""}>
       <Navbar cartCount={cartCount} 
@@ -313,6 +381,26 @@ function handleViewProduct(product) {
   path="/add-product"
   element={<AddProduct
   fetchProducts={fetchProducts} />}
+/>
+<Route
+  path="/orders"
+  element={
+    <ProtectedRoute>
+      <Orders />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/add-product"
+  element={
+    <ProtectedRoute>
+      <AdminRoute>
+        <AddProduct
+          fetchProducts={fetchProducts}
+        />
+      </AdminRoute>
+    </ProtectedRoute>
+  }
 />
 <Route
    path="/login"
@@ -337,6 +425,7 @@ handleViewProduct={handleViewProduct}
 recentlyViewed={recentlyViewed}
 currentPage={currentPage}
 setCurrentPage={setCurrentPage}
+handleDeleteProduct={handleDeleteProduct}
     />
    
   }
@@ -459,11 +548,32 @@ element={<Signup/>}
 
     <div className="checkout-content">
 
-      <h2>Order Summary</h2>
+      <h2>Checkout</h2>
+
+      <input
+        type="text"
+        placeholder="Enter Address"
+        className="checkout-input"
+      />
+
+      <select className="checkout-input">
+
+        <option>Cash on Delivery</option>
+        <option>UPI</option>
+        <option>Credit Card</option>
+
+      </select>
 
       <p>Total Items: {cartCount}</p>
 
       <p>Total Price: ₹{totalPrice}</p>
+
+      <button
+        className="place-order-btn"
+        onClick={handleCheckout}
+      >
+        Place Order
+      </button>
 
       <button
         onClick={() => setShowCheckout(false)}
@@ -474,7 +584,6 @@ element={<Signup/>}
     </div>
 
   </div>
-
 
 )}
 {

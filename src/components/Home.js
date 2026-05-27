@@ -1,7 +1,7 @@
 import Product from "./Product";
 import CategoryFilter from "./CategoryFilter";
 function Home({products,handleAddToCart,wishlist,toggleWishlist,setSelectedProduct,searchTerm,setSearchTerm,sortOption,setSortOption, selectedCategory,
-  setSelectedCategory,handleViewProduct,recentlyViewed,currentPage,setCurrentPage}) {
+  setSelectedCategory,handleViewProduct,recentlyViewed,currentPage,setCurrentPage,handleDeleteProduct}) {
  const filteredProducts = products.filter((item) => {
 
   console.log(selectedCategory);
@@ -132,9 +132,14 @@ const currentProducts =
         onAddToCart={() => handleAddToCart(item)}
         wishlist={wishlist}
         toggleWishlist={toggleWishlist}
-onViewDetails={() =>
+
+  onDelete={() =>
+    handleDeleteProduct(item.id)
+  }
+  onViewDetails={() =>
   handleViewProduct(item)
 }
+
 
       />
 
