@@ -1159,3 +1159,62 @@ body {
   background-color: rgba(255,255,255,0.1);
   color: #ff9900;
 }
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+    gap: 12px;
+    background-color: #131921;
+  }
+
+  .nav-logo img {
+    width: 120px;
+  }
+
+  .nav-address,
+  .nav-signin,
+  .nav-return {
+    display: none;
+  }
+
+  .nav-search {
+    width: 100%;
+    display: flex;
+  }
+
+  .search-input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .panel {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-link,
+  .logout-btn,
+  .nav-cart {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    background: #232f3e;
+    padding: 8px 14px;
+    border-radius: 8px;
+  }
+
+  .nav-cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+}
