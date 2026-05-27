@@ -1144,3 +1144,18 @@ body{
 body {
   overflow-x: hidden;
 }
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  border: 1px solid white;
+  background-color: rgba(255,255,255,0.1);
+  color: #ff9900;
+}

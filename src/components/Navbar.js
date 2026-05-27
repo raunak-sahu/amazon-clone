@@ -45,13 +45,11 @@ function Navbar({ cartCount,toggleCart,searchTerm,setSearchTerm })
 <button onClick={handleLogout}>
   Logout
 </button>
-  <Link to="/">
-    Home
-  </Link>
+  <Link to="/" className="nav-link">Home</Link>
 
-  <Link to="/wishlist">
-    Wishlist
-  </Link>
+<Link to="/wishlist" className="nav-link">
+  Wishlist
+</Link>
 <div
   className="nav-cart border"
   onClick={toggleCart}
