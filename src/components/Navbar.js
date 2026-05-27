@@ -41,38 +41,55 @@ function Navbar({ cartCount,toggleCart,searchTerm,setSearchTerm })
         <p className="nav-second">Account & Lists</p>
       </div>
 
-      <div className="nav-links">
-<button onClick={handleLogout}>
-  Logout
-</button>
-  <Link to="/" className="nav-link">Home</Link>
-
-<Link to="/wishlist" className="nav-link">
-  Wishlist
-</Link>
-<div
-  className="nav-cart border"
-  onClick={toggleCart}
->
+      
 
   <i className="fa-solid fa-cart-shopping"></i>
+<div className="mobile-nav-links">
 
-  <span className="nav-cart-btn">
+  <button
+    className="logout-btn"
+    onClick={handleLogout}
+  >
+    Logout
+  </button>
 
-    Cart
+  <Link
+    to="/"
+    className="nav-link"
+  >
+    Home
+  </Link>
 
-    {cartCount > 0 && (
-      <span className="cart-badge">
-        {cartCount}
-      </span>
-    )}
+  <Link
+    to="/wishlist"
+    className="nav-link"
+  >
+    Wishlist
+  </Link>
 
-  </span>
+  <div
+    className="nav-cart"
+    onClick={toggleCart}
+  >
+
+    <i className="fa-solid fa-cart-shopping"></i>
+
+    <span className="nav-cart-btn">
+
+      Cart
+
+      {cartCount > 0 && (
+        <span className="cart-badge">
+          {cartCount}
+        </span>
+      )}
+
+    </span>
+
+  </div>
 
 </div>
-
-
-</div>
+  
     </div>
   );
 }
