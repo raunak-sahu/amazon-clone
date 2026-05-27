@@ -43,7 +43,7 @@ function Navbar({ cartCount,toggleCart,searchTerm,setSearchTerm })
 
       
 
-  <i className="fa-solid fa-cart-shopping"></i>
+
 <div className="mobile-nav-links">
 
   <button
