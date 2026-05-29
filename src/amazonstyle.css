@@ -11,10 +11,11 @@
     align-items: center;
     justify-content: space-evenly;
 }
-.logo {
-  width: 100px;
-  height: auto;
-  object-fit: contain;
+.logo{
+    background-image: url("./images/amazonlogo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100px;
 }
 .border{
     border: 2px solid transparent;
