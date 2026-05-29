@@ -11,7 +11,11 @@ function Navbar({ cartCount,toggleCart,searchTerm,setSearchTerm })
      return (
     <div className="navbar">
       <div className="navlogo border">
-        <div className="logo"></div>
+        <img
+  src="/images/amazonlogo.png"
+  alt="Amazon Logo"
+  className="logo"
+/>
       </div>
 
       <div className="nav-address border">
