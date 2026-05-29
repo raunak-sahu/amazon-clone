@@ -14,8 +14,8 @@
 .logo{
     background-image: url("./images/amazonlogo.png");
     background-size: cover;
-    height: 50px;
-    width: 100px;
+    height: 80px;
+    width: 150px;
 }
 .border{
     border: 2px solid transparent;
