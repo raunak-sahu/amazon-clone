@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Orders from "./components/Orders";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";
@@ -597,6 +598,7 @@ element={<Signup/>}
 
 )}
     
+    <Footer />
     </div>
   )}
 
