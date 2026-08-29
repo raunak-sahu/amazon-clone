@@ -1,70 +1,361 @@
-# Getting Started with Create React App
+# 🛒 Amazon Clone — Full Stack E-Commerce Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack e-commerce web application inspired by Amazon, built with **React.js** on the frontend and a **Python backend**. The project includes product browsing, search, cart management, wishlist functionality, authentication, order placement, product management, and responsive design.
 
-## Available Scripts
+## 🚀 Live Demo
 
-In the project directory, you can run:
+**Frontend:**
+https://amazon-clone-nine-mocha.vercel.app/
 
-### `npm start`
+**Backend API:**
+https://amazon-backend-dnry.onrender.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> The frontend can be accessed directly by users without needing to clone or run the project locally.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🛍️ Shopping
 
-### `npm run build`
+* Browse products
+* Product categories
+* Product search
+* Product sorting
+* Product details page
+* Add products to cart
+* Increase/decrease product quantity
+* Automatic cart count
+* Automatic total price calculation
+* Remove/empty cart
+* Checkout popup
+* Order placement
+* Recently viewed products
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ❤️ Wishlist
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Add/remove products from wishlist
+* Wishlist page
+* Wishlist status displayed on products
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 👤 Authentication
 
-### `npm run eject`
+* User signup
+* User login
+* Logout functionality
+* Protected routes
+* Admin-protected routes
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 📦 Orders
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Place orders from cart
+* Order information stored through backend
+* Orders page for authenticated users
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🔐 Admin Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Admin route protection
+* Add products
+* Delete products
+* Product management
+* Automatic product list refresh after changes
 
-## Learn More
+### 🎨 UI / UX
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Amazon-inspired navigation bar
+* Responsive design
+* Mobile-friendly layout
+* Dark mode
+* Loading animation
+* Toast notifications
+* Responsive cart sidebar
+* Checkout modal
+* Responsive footer
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🛠️ Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Frontend
 
-### Analyzing the Bundle Size
+* React.js
+* React Router
+* Axios
+* JavaScript
+* HTML5
+* CSS3
+* Font Awesome
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Backend
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Python
+* REST API
+* FastAPI
+* Database integration
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Vercel / Netlify — Frontend
+* Render — Backend
+* GitHub — Source Code
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📂 Project Structure
+
+```text
+amazon-clone/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── AddProduct.js
+│   │   ├── AdminPanel.js
+│   │   ├── AdminRoute.js
+│   │   ├── CartPage.js
+│   │   ├── CategoryFilter.js
+│   │   ├── Footer.js
+│   │   ├── Home.js
+│   │   ├── Login.js
+│   │   ├── Navbar.js
+│   │   ├── Orders.js
+│   │   ├── Product.js
+│   │   ├── ProductDetails.js
+│   │   ├── ProtectedRoute.js
+│   │   ├── Signup.js
+│   │   └── WishlistPage.js
+│   │
+│   ├── App.js
+│   ├── index.js
+│   └── amazonstyle.css
+│
+├── backend/
+│   └── main.py
+│
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/raunak-sahu/amazon-clone.git
+```
+
+### 2. Navigate to the project
+
+```bash
+cd amazon-clone
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the React application
+
+```bash
+npm start
+```
+
+The application will run at:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## 🔧 Backend
+
+The frontend communicates with the deployed backend API.
+
+Backend:
+
+```text
+https://amazon-backend-dnry.onrender.com
+```
+
+Example API endpoints used by the application:
+
+```text
+GET  /products
+POST /add-to-cart
+POST /place-order
+DELETE /delete-product/{productId}
+```
+
+---
+
+## 🛒 Cart Functionality
+
+The cart supports multiple quantities of the same product.
+
+For example:
+
+```text
+Product Price: ₹500
+Quantity: 2
+
+Total: ₹1000
+```
+
+Cart data is also stored in browser `localStorage`, allowing cart items to persist when the page is refreshed.
+
+---
+
+## 🌙 Dark Mode
+
+The application includes a dark mode toggle.
+
+The selected theme is stored in `localStorage` so the user's preference persists after refreshing the page.
+
+---
+
+## 📱 Responsive Design
+
+The website is designed to work across:
+
+* 💻 Desktop
+* 📱 Mobile
+* 📲 Tablet
+
+The navigation bar, product cards, cart, checkout section, and footer adapt to smaller screen sizes.
+
+---
+
+## 🔐 Security
+
+Sensitive environment files are excluded from Git using `.gitignore`.
+
+```text
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+```
+
+Python cache files are also ignored:
+
+```text
+__pycache__/
+```
+
+---
+
+## 📸 Main Pages
+
+### 🏠 Home
+
+Product listing with:
+
+* Search
+* Categories
+* Sorting
+* Wishlist
+* Add to Cart
+* Product Details
+
+### 🛒 Cart
+
+Includes:
+
+* Product quantity controls
+* Total items
+* Total price
+* Empty Cart
+* Checkout
+
+### ❤️ Wishlist
+
+Displays products saved by the user.
+
+### 📦 Orders
+
+Displays placed orders for authenticated users.
+
+### 👨‍💼 Admin
+
+Admin users can:
+
+* Add products
+* Delete products
+* Manage products
+
+---
+
+## 🧠 What I Learned
+
+Building this project helped me practice:
+
+* React component architecture
+* React Hooks
+* State management
+* React Router
+* Protected routes
+* REST API integration
+* Axios
+* Authentication
+* CRUD operations
+* LocalStorage
+* Responsive CSS
+* Backend integration
+* Git & GitHub
+* Deployment
+* Debugging production issues
+
+---
+
+## 🔮 Future Improvements
+
+Some features planned for future versions:
+
+* Online payment integration
+* User profile page
+* Product reviews and ratings
+* Product filtering by price
+* Order tracking
+* Persistent wishlist using backend
+* Better authentication and authorization
+* Image upload for products
+* Improved mobile navigation
+* Database optimization
+
+---
+
+## 👨‍💻 Author
+
+**Raunak Sahu**
+
+Full Stack Developer | Machine Learning Enthusiast
+
+Interested in:
+
+* Full Stack Development
+* Backend Development
+* System Design
+* Machine Learning
+* Data Structures & Algorithms
+
+---
+
+## ⭐ Support
+
+If you found this project useful or interesting, consider giving the repository a ⭐ on GitHub!
+
+---
+
+## 📄 License
+
+This project is created for **educational and portfolio purposes**.
+
+It is an independent project inspired by the design and functionality of Amazon and is not affiliated with or endorsed by Amazon.
