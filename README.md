@@ -5,7 +5,7 @@ A full-stack e-commerce web application inspired by Amazon, built with **React.j
 ## 🚀 Live Demo
 
 **Frontend:**
-https://amazon-clone-nine-mocha.vercel.app/
+https://amazon-clone-6spb.vercel.app/
 
 **Backend API:**
 https://amazon-backend-dnry.onrender.com/
